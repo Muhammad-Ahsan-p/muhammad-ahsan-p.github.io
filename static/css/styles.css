@@ -1,0 +1,430 @@
+:root {
+  --primary-color: #f8f7f1;
+  --secondry-color: #cd0eec;
+  --white-color: #ffffff;
+  --black-color: #000000;
+
+  --padding-h: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+h2 {
+  font-weight: 400;
+}
+h3 {
+  font-weight: 400;
+}
+section {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--white-color);
+  padding: 0 var(--padding-h);
+}
+
+.landing,
+.skills,
+.contacts {
+  background-color: var(--primary-color);
+}
+section > .title {
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+}
+
+section > .wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section .content {
+  width: 100%;
+  padding-bottom: 100px;
+  max-width: 1000px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.card:hover {
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(105%);
+}
+.btn-resume {
+  background-color: var(--secondry-color);
+  color: var(--white-color);
+  padding: 10px 15px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.btn-resume:hover {
+  transform: scale(105%);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  color: var(--white-color);
+}
+/* Header css */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  padding: 20px var(--padding-h);
+  background-color: var(--primary-color);
+}
+header > .logo {
+  height: 30px;
+}
+header > nav {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+}
+
+.btn-menu {
+  font-weight: 300;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--secondry-color);
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s all ease-in;
+  display: none;
+}
+nav > a {
+  text-decoration: none;
+  color: var(--black-color);
+  transition: 0.2s all ease;
+}
+nav > a:hover {
+  color: var(--secondry-color);
+  transform: scale(105%);
+}
+/* Landing page css */
+.landing {
+  height: calc(100vh - 70px);
+  display: flex;
+  position: relative;
+}
+.landing > .titles {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.landing > .image {
+  background-image: url("../assets/art.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  flex: 3;
+  background-position: right bottom;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.landing > .image > img {
+  min-height: 80%;
+  min-width: 0%;
+  object-fit: cover;
+  object-position: center;
+}
+/* About css */
+
+.about .services {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  flex: 1;
+  min-width: 300px;
+  width: 100%;
+  height: 100%;
+}
+.services .service {
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  gap: 15px;
+}
+.service > span {
+  width: 60px;
+  height: 60px;
+  font-size: 25px;
+  background-color: var(--icon-bg);
+  border-radius: 50%;
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .details {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-height: 350px;
+  text-align: justify;
+  gap: 15px;
+  min-width: 300px;
+}
+
+.about h1 sub {
+  font-size: 25%;
+  font-weight: 600;
+  vertical-align: baseline;
+}
+
+/* Skills css */
+.skills .languages {
+  width: 100%;
+  flex: 1;
+  height: 100%;
+}
+.skills .languages img {
+  width: 100%;
+  height: 100%;
+}
+.frameworks {
+  width: 100%;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.frameworks > .skill {
+  width: 100%;
+  padding: 8px 20px;
+  background-color: var(--white-color);
+}
+.skill .progress {
+  width: 100%;
+  height: 6px;
+  background-color: #efefef;
+  margin: 7px 0;
+  border-radius: 3px;
+}
+.skill .progress .progress-bar {
+  background-color: var(--secondry-color);
+  height: 100%;
+  border-radius: inherit;
+}
+/* Projects section code */
+
+.project {
+  background-color: var(--card-bg);
+  color: var(--white-color);
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  text-align: justify;
+}
+/* Contacts css */
+.contacts .title h1 span {
+  color: var(--secondry-color);
+  white-space: nowrap;
+}
+
+.contacts .location {
+  flex: 1;
+  height: 100%;
+  min-width: 300px;
+  width: 100%;
+  min-height: 400px;
+}
+.contacts .contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 300px;
+  height: 100%;
+  max-height: 400px;
+  width: 100%;
+  min-height: 400px;
+}
+.contact-info a {
+  color: var(--black-color);
+}
+.contact-info .info {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 30px;
+}
+.info i {
+  font-size: 25px;
+  color: var(--secondry-color);
+}
+/* footer css */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+/* FLoating btn */
+
+.floating-btn {
+  position: fixed;
+  bottom: var(--padding-h);
+  right: var(--padding-h);
+  background-color: var(--secondry-color);
+  color: var(--white-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding-bottom: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s all ease;
+  z-index: 1000;
+}
+.floating-btn:hover {
+  transform: scale(105%);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Media quries */
+
+@media screen and (max-width: 1400px) {
+  :root {
+    --padding-h: 40px;
+  }
+
+  h1 {
+    font-size: 42px;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  p {
+    font-size: 16px;
+  }
+  
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --padding-h: 30px;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
+  section .content {
+    flex-direction: column;
+  }
+  section > .title {
+    padding: 30px;
+  }
+  nav {
+    position: fixed;
+    width: 50%;
+    min-width: 200px;
+    height: 100vh;
+    flex-direction: column;
+    border-right: 6px solid var(--secondry-color);
+    top: 0;
+    left: -100%;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    padding: 50px 0;
+    transition: 0.5s all ease;
+  }
+  nav.active {
+    left: 0;
+  }
+  .btn-menu {
+    display: flex;
+  }
+  .landing {
+    flex-direction: column;
+    padding: 0;
+  }
+  .landing .titles {
+    flex: 0.3;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    padding: var(--padding-h);
+    z-index: 500;
+  }
+  .landing .titles h2{
+    display: none;
+  }
+  .landing .image {
+    background-position: center bottom;
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+  }
+  .landing .image > img {
+    width: 100%
+  }
+
+  .about .content {
+    flex-direction: column-reverse;
+  }
+
+  .frameworks {
+    max-height: 450px;
+  }
+  .projects .project {
+    width: 100%;
+  }
+}
+
+
